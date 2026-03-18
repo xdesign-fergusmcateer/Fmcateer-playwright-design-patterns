@@ -1,6 +1,7 @@
 import { test as base, expect } from '@playwright/test'
 
-const test = base.extend({
+type MyFixtures = {testData: { email: string; password: string}, authenticatedUser: {}}
+const test = base.extend<MyFixtures>({
     testData: async ({ }, use) => {
         const data = {email: "test@example.com", password: "pass123"}
         await use(data)

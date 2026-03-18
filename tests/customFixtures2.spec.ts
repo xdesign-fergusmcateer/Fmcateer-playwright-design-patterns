@@ -1,13 +1,9 @@
 import { test as base, expect } from '@playwright/test'
 
 //Note: the following lines 4-6 was not presented at all in the LinkedIn course, and comes directly from Gemini...
-type MyFixtures = {
-    testData: any;
-};
+type MyFixtures = {testData: { email: string; password: string}, authenticatedUser: {}}
 
-//note: still errors in the below on lines 11 and 15, but the test passes?
-
-export const test = base.extend<MyFixtures>({
+const test = base.extend<MyFixtures>({
     testData: async ({ }, use) => {
         const data = {email: "test@example.com", password: "pass123"}
         await use(data)
@@ -26,10 +22,13 @@ export const test = base.extend<MyFixtures>({
 
     await use(page)
 
-    }, {auto: true} ]
-})
+    }, 
+    //{auto: true} 
+    ]})
 
-test.skip()
+//note: still errors in the below on lines 11 and 15, but the test passes?
+
+//test.skip()
 
 test("Should log in with test data", async ({ page, testData }) => {
     const url = page.url()
