@@ -6,9 +6,7 @@ const test = base.extend<MyFixtures>({
         const data = {email: "test@example.com", password: "pass123"}
         await use(data)
     },
-    authenticatedUser: async({page, testData}, use) => {
-
-    } 
+    authenticatedUser: async({page, testData}, use) => {} 
 })
 
 test.skip()

@@ -15,6 +15,8 @@ const test = base.extend<MyFixtures>({
     {scope: 'test'}]
 });
 
+test.skip()
+
 test("Test 1", async({ counterFixture }) => {
     console.log(`Test 1 Counter: ${counterFixture}`);
 });

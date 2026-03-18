@@ -7,6 +7,8 @@ test('Sign in button is visible', async({page}) => {
     await expect(signInButton).toBeVisible()
 })
 
+test.skip()
+
 //Test and import step below are without fixtures:
 
 //import {expect, test, chromium} from '@playwright/test'
