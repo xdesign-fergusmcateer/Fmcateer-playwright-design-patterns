@@ -12,7 +12,7 @@ const test = base.extend<MyFixtures>({
         counter++;
         await use(counter);
     },
-    {scope: 'worker'}]
+    {scope: 'test'}]
 });
 
 test.skip()
