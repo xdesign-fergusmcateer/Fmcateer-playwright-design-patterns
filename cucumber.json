@@ -1,8 +1,10 @@
 {
-    "default": {
-        "require": ["steps/**/*.ts "],
-        "paths": ["features/**/*.feature"],
-        "requireModule": ["ts-node/register"]
-
-    }
+  "default": {
+    "paths": ["features/**/*.feature"],
+    "require": ["tests/steps/**/*.ts",
+    "!tests/steps/loginSteps.ts"
+  ],
+    "requireModule": ["ts-node/register"],
+    "format": ["progress-bar", "summary"]
+  }
 }

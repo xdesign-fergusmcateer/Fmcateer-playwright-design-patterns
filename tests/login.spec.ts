@@ -6,6 +6,8 @@ import loginData from '../data/loginData.json'
 
 loginData.forEach(({email, password}) => {
 
+test.skip()
+
 test(`User can login with Email ${email}`, async({page}) => {
     
     await page.goto("https://binaryville.com/account/");

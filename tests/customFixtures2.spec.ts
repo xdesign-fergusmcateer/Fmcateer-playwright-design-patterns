@@ -26,8 +26,6 @@ const test = base.extend<MyFixtures>({
     //{auto: true} 
     ]})
 
-//note: still errors in the below on lines 11 and 15, but the test passes?
-
 test.skip()
 
 test("Should log in with test data", async ({ page, testData }) => {
