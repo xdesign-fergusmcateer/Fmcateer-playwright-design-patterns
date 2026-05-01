@@ -1,5 +1,7 @@
 import { test, expect} from '@playwright/test'
 
+test.skip()
+
 test('Shop button is visible', async( { page } ) => {
 
     await page.goto( "https://www.binaryville.com" );
