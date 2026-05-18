@@ -1,4 +1,4 @@
-import {test, expect} from '../page_objects/fixtures'
+import {test, expect} from '../fixtures/fixtures'
 
 //This is a fixture for the login page?
 

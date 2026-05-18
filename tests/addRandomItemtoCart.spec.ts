@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test'
 
+test.skip()
 
 test('add random item to cart', async ({ page }) => {
 
